@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <rect width="600" height="450" fill="#eef4fa"/>
+  <rect x="40" y="300" width="520" height="18" rx="4" fill="#1a3a5c"/>
+  <rect x="60" y="318" width="480" height="28" rx="6" fill="#d8e6f2"/>
+  <g stroke="#94b8d4" stroke-width="2">
+    <line x1="90" y1="318" x2="90" y2="346"/><line x1="130" y1="318" x2="130" y2="346"/>
+    <line x1="170" y1="318" x2="170" y2="346"/><line x1="210" y1="318" x2="210" y2="346"/>
+    <line x1="250" y1="318" x2="250" y2="346"/><line x1="290" y1="318" x2="290" y2="346"/>
+    <line x1="330" y1="318" x2="330" y2="346"/><line x1="370" y1="318" x2="370" y2="346"/>
+    <line x1="410" y1="318" x2="410" y2="346"/><line x1="450" y1="318" x2="450" y2="346"/>
+    <line x1="490" y1="318" x2="490" y2="346"/>
+  </g>
+  <rect x="95" y="268" width="52" height="40" rx="4" fill="#c9a66b" stroke="#1a3a5c" stroke-width="2"/>
+  <rect x="175" y="268" width="52" height="40" rx="4" fill="#c9a66b" stroke="#1a3a5c" stroke-width="2"/>
+  <rect x="255" y="268" width="52" height="40" rx="4" fill="#c9a66b" stroke="#1a3a5c" stroke-width="2"/>
+  <rect x="335" y="268" width="52" height="40" rx="4" fill="#4aace8" stroke="#1a3a5c" stroke-width="2"/>
+  <path d="M360 268 L420 220 L470 268 Z" fill="#1a3a5c" opacity="0.15"/>
+  <rect x="420" y="200" width="100" height="68" rx="6" fill="#fff" stroke="#4aace8" stroke-width="3"/>
+  <rect x="435" y="215" width="70" height="38" rx="3" fill="#eef4fa" stroke="#1a3a5c" stroke-width="2"/>
+  <path d="M300 318 L360 250 L420 318 Z" fill="#4aace8" opacity="0.35"/>
+  <rect x="355" y="235" width="14" height="90" rx="3" fill="#1a3a5c"/>
+  <circle cx="362" cy="325" r="10" fill="#4aace8"/>
+  <rect x="80" y="80" width="180" height="120" rx="10" fill="#fff" stroke="#1a3a5c" stroke-width="2"/>
+  <rect x="100" y="105" width="140" height="12" rx="3" fill="#4aace8" opacity="0.5"/>
+  <rect x="100" y="128" width="100" height="8" rx="2" fill="#d8e6f2"/>
+  <rect x="100" y="145" width="120" height="8" rx="2" fill="#d8e6f2"/>
+  <rect x="100" y="162" width="80" height="8" rx="2" fill="#d8e6f2"/>
+  <circle cx="120" cy="95" r="6" fill="#4aace8"/>
+  <path d="M390 120 L470 120 L470 180 L390 180 Z" fill="#1a3a5c" opacity="0.08"/>
+  <path d="M400 130 L460 130 M400 150 L450 150 M400 170 L440 170" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M120 350 L520 350" stroke="#1a3a5c" stroke-width="2" stroke-dasharray="8 6" opacity="0.3"/>
+  <text x="300" y="410" text-anchor="middle" fill="#1a3a5c" font-family="Arial, sans-serif" font-size="14" font-weight="600">Trieur · Convoyeur · Intralogistique</text>
+</svg>
