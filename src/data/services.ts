@@ -20,7 +20,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "installation-logistique",
-    image: "/services/installation-logistique.jpg",
+    image: "/services/installation-logistique-v2.jpg",
     title: {
       fr: "Installation logistique et de stockage",
       en: "Logistics and storage installation",
@@ -380,98 +380,6 @@ export const services: Service[] = [
           fr: "Peinture, revêtements et détails de finition pour un rendu soigné et conforme à votre image de marque.",
           en: "Painting, coverings and finishing details for a polished result aligned with your brand image.",
           zh: "涂装、饰面及细节收尾，呈现精致效果，契合品牌形象。",
-        },
-      },
-    ],
-  },
-  {
-    slug: "approvisionnement",
-    image: "/services/approvisionnement.jpg",
-    title: {
-      fr: "Approvisionnement en équipement et matériel",
-      en: "Equipment and material supply",
-      zh: "设备和材料供应",
-    },
-    shortDescription: {
-      fr: "Fourniture et approvisionnement en équipements industriels et logistiques.",
-      en: "Supply and procurement of industrial and logistics equipment.",
-      zh: "工业和物流设备的供应和采购。",
-    },
-    description: {
-      fr: "Nous assurons l'approvisionnement en équipements et matériels pour vos projets logistiques et industriels : sélection des fournisseurs, gestion des commandes et livraison sur site, en coordination avec nos équipes d'installation.",
-      en: "We handle equipment and material procurement for your logistics and industrial projects: supplier selection, order management and on-site delivery, coordinated with our installation teams.",
-      zh: "我们为您的物流和工业项目提供设备和材料采购：供应商选择、订单管理和现场交付，与我们的安装团队协调。",
-    },
-    features: {
-      fr: [
-        "Sélection de fournisseurs",
-        "Gestion des commandes",
-        "Livraison sur site",
-        "Coordination avec l'installation",
-      ],
-      en: [
-        "Supplier selection",
-        "Order management",
-        "On-site delivery",
-        "Installation coordination",
-      ],
-      zh: ["供应商选择", "订单管理", "现场交付", "安装协调"],
-    },
-    offerings: [
-      {
-        id: "selection-fournisseurs",
-        image: "/services/offerings/approvisionnement/selection-fournisseurs.jpg",
-        title: {
-          fr: "Sélection de fournisseurs",
-          en: "Supplier selection",
-          zh: "供应商甄选",
-        },
-        description: {
-          fr: "Identification et qualification de fournisseurs fiables pour vos équipements logistiques et industriels.",
-          en: "Identification and qualification of reliable suppliers for your logistics and industrial equipment.",
-          zh: "为物流及工业设备筛选并评估可靠供应商。",
-        },
-      },
-      {
-        id: "gestion-commandes",
-        image: "/services/offerings/approvisionnement/gestion-commandes.jpg",
-        title: {
-          fr: "Gestion des commandes",
-          en: "Order management",
-          zh: "订单管理",
-        },
-        description: {
-          fr: "Suivi des achats, délais et conformité technique pour sécuriser vos approvisionnements.",
-          en: "Tracking purchases, lead times and technical compliance to secure your supplies.",
-          zh: "跟踪采购、交期及技术合规，保障供应安全。",
-        },
-      },
-      {
-        id: "livraison-site",
-        image: "/services/offerings/approvisionnement/livraison-site.jpg",
-        title: {
-          fr: "Livraison sur site",
-          en: "On-site delivery",
-          zh: "现场交付",
-        },
-        description: {
-          fr: "Organisation logistique et réception des équipements directement sur vos chantiers et sites d'exploitation.",
-          en: "Logistics organization and equipment reception directly at your worksites and operating sites.",
-          zh: "组织物流并将设备直接送达工地及运营现场。",
-        },
-      },
-      {
-        id: "coordination-installation",
-        image: "/services/offerings/approvisionnement/coordination-installation.jpg",
-        title: {
-          fr: "Coordination avec l'installation",
-          en: "Installation coordination",
-          zh: "与安装团队协同",
-        },
-        description: {
-          fr: "Synchronisation des livraisons avec nos équipes terrain pour une mise en service sans rupture de planning.",
-          en: "Synchronization of deliveries with our field teams for commissioning without schedule disruption.",
-          zh: "与现场安装团队同步交付进度，确保按期投产。",
         },
       },
     ],

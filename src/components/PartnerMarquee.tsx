@@ -3,15 +3,20 @@ import { partners } from "@/data/partners";
 type PartnerMarqueeProps = {
   label: string;
   variant?: "light" | "dark";
+  compact?: boolean;
 };
 
-export default function PartnerMarquee({ label, variant = "light" }: PartnerMarqueeProps) {
+export default function PartnerMarquee({ label, variant = "light", compact = false }: PartnerMarqueeProps) {
   const items = [...partners, ...partners];
 
   const tileClass =
     variant === "dark"
-      ? "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md sm:size-28"
-      : "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-4 shadow-sm backdrop-blur-md sm:size-28";
+      ? compact
+        ? "flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md sm:size-24"
+        : "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md sm:size-28"
+      : compact
+        ? "flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-3 shadow-sm backdrop-blur-md sm:size-24"
+        : "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-4 shadow-sm backdrop-blur-md sm:size-28";
 
   const labelClass =
     variant === "dark"
@@ -20,7 +25,7 @@ export default function PartnerMarquee({ label, variant = "light" }: PartnerMarq
 
   return (
     <div className="w-full">
-      <p className={`mb-6 text-center ${labelClass}`}>{label}</p>
+      <p className={`${compact ? "mb-4" : "mb-6"} text-center ${labelClass}`}>{label}</p>
       <div
         className="overflow-hidden"
         style={{

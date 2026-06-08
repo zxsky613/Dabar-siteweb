@@ -1,6 +1,8 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import PageHeader from "@/components/PageHeader";
+import { StatsSection } from "@/components/Sections";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { isValidLocale, type Locale } from "@/lib/i18n/config";
 
@@ -24,6 +26,32 @@ export default async function AboutPage({ params }: PageProps) {
   return (
     <main>
       <PageHeader title={dict.about.title} subtitle={dict.about.subtitle} />
+
+      <StatsSection dict={dict} />
+
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <FadeIn>
+              <div className="glass-card p-8">
+                <h2 className="text-3xl font-bold text-navy">{dict.home.aboutTitle}</h2>
+                <p className="mt-6 text-lg leading-relaxed text-gray-600">{dict.home.aboutText}</p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <div className="glass-card relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/about-team-v2.png"
+                  alt={dict.home.aboutTitle}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
-import ProcessSection from "@/components/ProcessSection";
 import ServiceOfferingCards from "@/components/ServiceOfferingCards";
 import { getServiceBySlug, services } from "@/data/services";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -78,8 +77,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </FadeIn>
         </div>
       </section>
-
-      <ProcessSection dict={dict} />
     </main>
   );
 }

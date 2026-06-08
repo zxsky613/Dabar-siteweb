@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ServiceShowcase from "@/components/ServiceShowcase";
-import ProcessSection from "@/components/ProcessSection";
 import PageHeader from "@/components/PageHeader";
 import { services } from "@/data/services";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -28,8 +27,6 @@ export default async function ServicesPage({ params }: PageProps) {
       <PageHeader title={dict.services.title} subtitle={dict.services.subtitle} />
 
       <ServiceShowcase services={services} locale={locale} dict={dict} />
-
-      <ProcessSection dict={dict} />
     </main>
   );
 }

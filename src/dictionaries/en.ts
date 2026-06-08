@@ -19,10 +19,13 @@ export const en: Dictionary = {
   stats: {
     title: "Dabar in numbers",
     years: "Years of experience",
+    yearsValue: "8",
     projects: "Completed projects",
+    projectsValue: "50+",
     clients: "Satisfied clients",
+    clientsValue: "20+",
     countries: "Countries covered",
-    placeholder: "Coming soon",
+    countriesValue: "10",
   },
   home: {
     aboutTitle: "Who we are",
@@ -144,7 +147,6 @@ export const en: Dictionary = {
     "Information and communication technology",
     "Electrical system renovation",
     "Office fit-out and renovation",
-    "Equipment supply",
     "Other",
   ],
 };

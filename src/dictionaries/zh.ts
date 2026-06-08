@@ -19,10 +19,13 @@ export const zh: Dictionary = {
   stats: {
     title: "Dabar 数据",
     years: "年行业经验",
+    yearsValue: "8",
     projects: "完成项目",
+    projectsValue: "50+",
     clients: "满意客户",
+    clientsValue: "20+",
     countries: "覆盖国家",
-    placeholder: "即将公布",
+    countriesValue: "10",
   },
   home: {
     aboutTitle: "关于我们",
@@ -142,7 +145,6 @@ export const zh: Dictionary = {
     "信息通信技术",
     "电气系统改造",
     "办公室装修与翻新",
-    "设备供应",
     "其他",
   ],
 };

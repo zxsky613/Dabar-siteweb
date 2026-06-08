@@ -17,10 +17,13 @@ export const fr = {
   stats: {
     title: "Dabar en chiffres",
     years: "Années d'expérience",
+    yearsValue: "8",
     projects: "Projets réalisés",
+    projectsValue: "50+",
     clients: "Clients satisfaits",
+    clientsValue: "20+",
     countries: "Pays couverts",
-    placeholder: "À venir",
+    countriesValue: "10",
   },
   home: {
     aboutTitle: "Qui sommes-nous",
@@ -142,7 +145,6 @@ export const fr = {
     "Technologies de l'information et de la communication",
     "Réaménagement des systèmes électriques",
     "Aménagement et rénovation de bureaux",
-    "Approvisionnement en équipement",
     "Autre",
   ],
 };
