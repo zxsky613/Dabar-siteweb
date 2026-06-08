@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #eef4fa;
+  --background: #ffffff;
   --foreground: #1a2e44;
   --navy: #1a3a5c;
   --navy-dark: #0a1f33;
@@ -78,7 +78,7 @@ body {
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  background: linear-gradient(160deg, #e8f2fa 0%, #f5f9fc 40%, #dceaf5 100%);
+  background: #ffffff;
 }
 
 .ambient-orb {

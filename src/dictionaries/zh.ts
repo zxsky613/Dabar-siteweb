@@ -14,7 +14,13 @@ export const zh: Dictionary = {
     subtitle:
       "内部物流安装专家——分拣机、智能货架、电气与机械工程。为仓库、办公室和生产线提供交钥匙解决方案。",
     ctaQuote: "免费申请报价",
+    ctaContact: "联系我们",
     ctaServices: "了解我们的服务",
+    images: {
+      convoyeur: "物流仓库中的自动化弯道输送线",
+      trieur: "带输送线的自动分拣系统",
+      rayonnages: "仓库货架与工业安装",
+    },
   },
   stats: {
     title: "Dabar 数据",

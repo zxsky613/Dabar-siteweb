@@ -25,7 +25,6 @@ export default function Navbar({ locale, dict }: NavbarProps) {
     { href: `/${locale}`, label: dict.nav.home, exact: true },
     { href: `/${locale}/services`, label: dict.nav.services },
     { href: `/${locale}/realisations`, label: dict.nav.projects },
-    { href: `/${locale}/devis`, label: dict.nav.quote },
     { href: `/${locale}/a-propos`, label: dict.nav.about },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];

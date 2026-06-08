@@ -12,7 +12,13 @@ export const fr = {
     subtitle:
       "Expert en installation intralogistique — trieurs, rayonnages intelligents, ingénierie électrique et mécanique. Solutions clés en main pour entrepôts, bureaux et lignes de production.",
     ctaQuote: "Demander un devis gratuit",
+    ctaContact: "Contactez-nous",
     ctaServices: "Découvrir nos services",
+    images: {
+      convoyeur: "Convoyeur courbe automatisé en entrepôt logistique",
+      trieur: "Système de tri automatique avec convoyeurs",
+      rayonnages: "Rayonnages et installation en entrepôt industriel",
+    },
   },
   stats: {
     title: "Dabar en chiffres",

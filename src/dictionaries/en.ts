@@ -14,7 +14,13 @@ export const en: Dictionary = {
     subtitle:
       "Expert in intralogistics installation — sorters, smart racking, electrical and mechanical engineering. Turnkey solutions for warehouses, offices and production lines.",
     ctaQuote: "Request a free quote",
+    ctaContact: "Contact us",
     ctaServices: "Discover our services",
+    images: {
+      convoyeur: "Automated curved conveyor in a logistics warehouse",
+      trieur: "Automated sorting system with conveyors",
+      rayonnages: "Racking and warehouse industrial installation",
+    },
   },
   stats: {
     title: "Dabar in numbers",
