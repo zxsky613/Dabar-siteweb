@@ -102,7 +102,7 @@ export default async function LegalPage({ params }: PageProps) {
     <main>
       <PageHeader title={dict.legal.mentionsTitle} />
 
-      <section className="py-20">
+      <section className="page-content">
         <div className="mx-auto max-w-3xl px-6">
           <p className="mb-10 text-sm text-gray-500">
             {dict.legal.lastUpdate} : {new Date().getFullYear()}

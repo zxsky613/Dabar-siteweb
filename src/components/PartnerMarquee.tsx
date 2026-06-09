@@ -25,7 +25,7 @@ export default function PartnerMarquee({ label, variant = "light", compact = fal
 
   return (
     <div className="w-full">
-      <p className={`${compact ? "mb-4" : "mb-6"} text-center ${labelClass}`}>{label}</p>
+      <p className={`${compact ? "mb-5" : "mb-6"} text-center ${labelClass}`}>{label}</p>
       <div
         className="overflow-hidden"
         style={{

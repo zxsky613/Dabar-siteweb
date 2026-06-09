@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import PartnerMarquee from "@/components/PartnerMarquee";
+import HomeProjectsSection from "@/components/HomeProjectsSection";
 import ProcessSection from "@/components/ProcessSection";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { isValidLocale, type Locale } from "@/lib/i18n/config";
@@ -101,7 +102,7 @@ export default async function HomePage({ params }: PageProps) {
         </div>
 
         {/* Scrolling partner logos */}
-        <div className="relative shrink-0 border-t border-gray-100 bg-white py-4 sm:py-5">
+        <div className="relative shrink-0 border-t border-gray-100 bg-white py-6 sm:py-10">
           <div className="mx-auto max-w-6xl px-6">
             <PartnerMarquee label={dict.home.partnersMarquee} variant="light" compact />
           </div>
@@ -109,6 +110,8 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       <ProcessSection dict={dict} />
+
+      <HomeProjectsSection locale={locale} dict={dict} />
     </main>
   );
 }

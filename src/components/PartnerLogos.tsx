@@ -8,7 +8,7 @@ type PartnerLogosProps = {
 
 export default function PartnerLogos({ title, subtitle }: PartnerLogosProps) {
   return (
-    <section className="border-t border-gray-200 bg-white py-20">
+    <section className="section-spacing-lg border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">

@@ -28,7 +28,7 @@ export default async function DevisPage({ params }: PageProps) {
     <main>
       <PageHeader title={dict.quote.title} subtitle={dict.quote.subtitle} />
 
-      <section className="py-20">
+      <section className="page-content">
         <div className="mx-auto max-w-2xl px-6">
           <FadeIn>
             <div className="glass-card p-8">

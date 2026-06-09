@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "env:apply": "powershell -Command \"Copy-Item -Force '.env.example' '.env.local'\"",
+    "env:open": "powershell -Command \"notepad '.env.local'\""
   },
   "dependencies": {
     "next": "16.2.7",

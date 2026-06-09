@@ -34,7 +34,7 @@ export const fr = {
   home: {
     aboutTitle: "Qui sommes-nous",
     aboutText:
-      "Dabar est un expert d'installation spécialisé en intralogistique. Depuis plus de 10 ans, nous réalisons l'installation professionnelle de trieurs et de rayonnages intelligents, en couvrant l'ingénierie électrique et mécanique. Nous délivrons des solutions clés en main de courants forts et faibles pour entrepôts et bureaux, et intervenons également pour l'installation de lignes de production en usine.",
+      "Dabar est un expert d'installation spécialisé en intralogistique. Depuis 8 ans, nous réalisons l'installation professionnelle de trieurs et de rayonnages intelligents, en couvrant l'ingénierie électrique et mécanique. Nous délivrons des solutions clés en main de courants forts et faibles pour entrepôts et bureaux, et intervenons également pour l'installation de lignes de production en usine.",
     servicesTitle: "Nos services",
     servicesSubtitle: "Des solutions techniques complètes pour vos projets industriels et logistiques.",
     servicesLink: "Voir tous les services",
@@ -48,9 +48,10 @@ export const fr = {
     testimonialsTitle: "Témoignages",
     testimonialsSubtitle: "Ce que nos clients disent de nous.",
     testimonialsPlaceholder: "Témoignage à venir",
-    projectsTitle: "Projets récents",
-    projectsSubtitle: "Découvrez nos dernières réalisations.",
-    projectsLink: "Voir toutes les réalisations",
+    projectsTitle: "Nos réalisations",
+    projectsSubtitle: "Convoyeurs, rack et courant faible & fort — découvrez nos projets livrés en Europe.",
+    projectsLink: "Voir toutes nos réalisations",
+    categoryProjectsLabel: "réalisations",
     zoneTitle: "Zone d'intervention",
     zoneText: "Nous intervenons en Europe pour vos projets intralogistiques et industriels.",
   },
@@ -83,6 +84,21 @@ export const fr = {
     sector: "Secteur",
     location: "Localisation",
     year: "Année",
+    highlightsTitle: "Chiffres clés",
+    categories: {
+      conveyors: {
+        title: "Convoyeurs",
+        subtitle: "Tri automatique, cross-belt, convoyeurs et systèmes de manutention.",
+      },
+      racking: {
+        title: "Rack & rayonnages",
+        subtitle: "Installation de racks, entrepôts denses et systèmes de stockage automatisés.",
+      },
+      electrical: {
+        title: "Courant faible & fort",
+        subtitle: "Réseaux Wi-Fi, vidéosurveillance, câblage et rénovation électrique.",
+      },
+    },
   },
   quote: {
     title: "Demander un devis",
@@ -121,7 +137,7 @@ export const fr = {
     subtitle: "Expert en gestion de projet logistique et intralogistique en Europe.",
     historyTitle: "Notre histoire",
     historyPlaceholder:
-      "L'histoire de Dabar sera bientôt disponible ici. Fondée en 2017, l'entreprise s'est spécialisée dans l'installation intralogistique et la gestion de projets industriels.",
+      "Fondée en 2017 à Paris, Dabar a rapidement évolué pour devenir un acteur clé dans la réalisation de projets logistiques, industriels et technologiques à travers l'Europe.\n\nDepuis ses débuts, l'entreprise s'est spécialisée dans la gestion de projets complexes, couvrant une large gamme de services allant de la logistique intelligente aux aménagements électriques et mécaniques.",
     valuesTitle: "Nos valeurs",
     values: [
       { title: "Fiabilité", description: "Des installations durables, conformes aux normes et livrées dans les délais." },

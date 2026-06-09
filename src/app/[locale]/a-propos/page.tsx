@@ -27,9 +27,7 @@ export default async function AboutPage({ params }: PageProps) {
     <main>
       <PageHeader title={dict.about.title} subtitle={dict.about.subtitle} />
 
-      <StatsSection dict={dict} />
-
-      <section className="py-20">
+      <section className="page-content">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <FadeIn>
@@ -53,18 +51,20 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-20">
+      <StatsSection dict={dict} />
+
+      <section className="section-spacing">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h2 className="text-2xl font-bold text-navy">{dict.about.historyTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-gray-600">
+            <p className="mt-6 max-w-3xl whitespace-pre-line text-lg leading-relaxed text-gray-600">
               {dict.about.historyPlaceholder}
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="border-t border-gray-200 bg-white py-20">
+      <section className="section-spacing border-t border-gray-200 bg-white">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h2 className="text-center text-2xl font-bold text-navy">{dict.about.valuesTitle}</h2>
@@ -82,7 +82,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h2 className="text-2xl font-bold text-navy">{dict.about.teamTitle}</h2>
@@ -91,7 +91,7 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="border-t border-gray-200 bg-white py-20">
+      <section className="section-spacing border-t border-gray-200 bg-white">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h2 className="text-2xl font-bold text-navy">{dict.about.certsTitle}</h2>

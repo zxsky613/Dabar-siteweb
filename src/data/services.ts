@@ -40,14 +40,14 @@ export const services: Service[] = [
       fr: [
         "Installation de trieurs et convoyeurs",
         "Rayonnages intelligents et automatisés",
-        "Intégration systèmes de contrôle",
+        "Service de maintenance",
       ],
       en: [
         "Sorter and conveyor installation",
         "Smart and automated racking",
-        "Control system integration",
+        "Maintenance service",
       ],
-      zh: ["分拣机和输送机安装", "智能自动化货架", "控制系统集成"],
+      zh: ["分拣机和输送机安装", "智能自动化货架", "维护服务"],
     },
     offerings: [
       {
@@ -79,17 +79,17 @@ export const services: Service[] = [
         },
       },
       {
-        id: "systemes-controle",
-        image: "/services/offerings/installation-logistique/systemes-controle.jpg",
+        id: "service-maintenance",
+        image: "/services/offerings/installation-logistique/maintenance-v2.jpg",
         title: {
-          fr: "Intégration des systèmes de contrôle",
-          en: "Control system integration",
-          zh: "控制系统集成",
+          fr: "Service de maintenance",
+          en: "Maintenance service",
+          zh: "维护服务",
         },
         description: {
-          fr: "Connexion et paramétrage des automates, capteurs et logiciels de supervision pour piloter l'ensemble de vos équipements.",
-          en: "Connection and configuration of PLCs, sensors and supervision software to operate all your equipment.",
-          zh: "连接和配置PLC、传感器及监控软件，统一管理所有设备。",
+          fr: "Maintenance préventive et curative de vos équipements logistiques : convoyeurs, trieurs, rayonnages et systèmes automatisés pour assurer la continuité de vos opérations.",
+          en: "Preventive and corrective maintenance of your logistics equipment — conveyors, sorters, racking and automated systems to keep your operations running.",
+          zh: "物流设备的预防性与纠正性维护：输送机、分拣机、货架及自动化系统，保障运营连续性。",
         },
       },
     ],

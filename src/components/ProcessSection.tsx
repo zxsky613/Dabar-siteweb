@@ -7,16 +7,16 @@ type ProcessSectionProps = {
 
 export default function ProcessSection({ dict }: ProcessSectionProps) {
   return (
-    <section className="py-20">
+    <section className="section-spacing-lg border-t border-gray-100 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
             <h2 className="text-3xl font-bold text-navy">{dict.process.title}</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">{dict.process.subtitle}</p>
+            <p className="mx-auto mt-3 max-w-2xl text-gray-600">{dict.process.subtitle}</p>
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {dict.process.steps.map((step, i) => (
             <FadeIn key={step.title} delay={i * 100} className="h-full">
               <div className="glass-card flex h-full flex-col p-6">

@@ -72,6 +72,45 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Espacement standard : titre de page → contenu */
+.page-content {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .page-content {
+    padding-top: 1.75rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* Entre blocs de contenu (pages intérieures) */
+.section-spacing {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+@media (min-width: 640px) {
+  .section-spacing {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+}
+
+/* Entre grandes sections (accueil, séparations visuelles) */
+.section-spacing-lg {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+  .section-spacing-lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
 /* Ambient page background */
 .ambient-bg {
   position: fixed;

@@ -1,8 +1,8 @@
 import nodemailer from "nodemailer";
 
 export function createMailTransport() {
-  const host = process.env.SMTP_HOST ?? "mailout.one.com";
-  const port = Number(process.env.SMTP_PORT ?? 587);
+  const host = process.env.SMTP_HOST ?? "send.one.com";
+  const port = Number(process.env.SMTP_PORT ?? 465);
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
 

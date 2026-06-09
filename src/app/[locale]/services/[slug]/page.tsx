@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
+import { BackLink } from "@/components/NavArrow";
 import ServiceOfferingCards from "@/components/ServiceOfferingCards";
 import { getServiceBySlug, services } from "@/data/services";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
@@ -37,18 +38,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <main>
-      <section className="bg-white pt-8">
+      <section className="bg-white pt-3">
         <div className="mx-auto max-w-6xl px-6">
-          <Link
-            href={`/${locale}/services`}
-            className="inline-flex items-center gap-1 text-sm text-blue-light transition-colors hover:text-navy"
-          >
-            ← {dict.services.back}
-          </Link>
+          <BackLink href={`/${locale}/services`} label={dict.services.back} />
         </div>
       </section>
 
-      <section className="bg-white pb-16 pt-6">
+      <section className="page-content bg-white">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <h1 className="mb-6 text-center text-3xl font-bold text-navy sm:text-4xl">

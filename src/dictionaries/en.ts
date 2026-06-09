@@ -36,7 +36,7 @@ export const en: Dictionary = {
   home: {
     aboutTitle: "Who we are",
     aboutText:
-      "Dabar is an installation expert specialized in intralogistics. For over 10 years, we have been professionally installing sorters and smart racking systems, covering electrical and mechanical engineering. We deliver turnkey strong and weak current solutions for warehouses and offices, and also install production lines in factories.",
+      "Dabar is an installation expert specialized in intralogistics. With 8 years of experience, we professionally install sorters and smart racking systems, covering electrical and mechanical engineering. We deliver turnkey strong and weak current solutions for warehouses and offices, and also install production lines in factories.",
     servicesTitle: "Our services",
     servicesSubtitle: "Complete technical solutions for your industrial and logistics projects.",
     servicesLink: "View all services",
@@ -50,9 +50,10 @@ export const en: Dictionary = {
     testimonialsTitle: "Testimonials",
     testimonialsSubtitle: "What our clients say about us.",
     testimonialsPlaceholder: "Testimonial coming soon",
-    projectsTitle: "Recent projects",
-    projectsSubtitle: "Discover our latest achievements.",
+    projectsTitle: "Our projects",
+    projectsSubtitle: "Conveyors, racking and electrical — explore our delivered projects across Europe.",
     projectsLink: "View all projects",
+    categoryProjectsLabel: "projects",
     zoneTitle: "Service area",
     zoneText: "We operate across Europe for your intralogistics and industrial projects.",
   },
@@ -85,6 +86,21 @@ export const en: Dictionary = {
     sector: "Sector",
     location: "Location",
     year: "Year",
+    highlightsTitle: "Key figures",
+    categories: {
+      conveyors: {
+        title: "Conveyors",
+        subtitle: "Automated sorting, cross-belt systems and material handling lines.",
+      },
+      racking: {
+        title: "Racking",
+        subtitle: "Rack installation, dense storage and automated warehouse systems.",
+      },
+      electrical: {
+        title: "Low & high current",
+        subtitle: "Wi-Fi networks, CCTV, cabling and electrical upgrades.",
+      },
+    },
   },
   quote: {
     title: "Request a quote",
@@ -123,7 +139,7 @@ export const en: Dictionary = {
     subtitle: "Expert in logistics project management and intralogistics across Europe.",
     historyTitle: "Our story",
     historyPlaceholder:
-      "Dabar's story will be available here soon. Founded in 2017, the company specialized in intralogistics installation and industrial project management.",
+      "Founded in 2017 in Paris, Dabar quickly grew to become a key player in delivering logistics, industrial and technology projects across Europe.\n\nFrom the outset, the company has specialized in managing complex projects, covering a wide range of services from smart logistics to electrical and mechanical fit-outs.",
     valuesTitle: "Our values",
     values: [
       { title: "Reliability", description: "Durable installations, compliant with standards and delivered on time." },

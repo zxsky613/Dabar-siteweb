@@ -14,7 +14,7 @@ type ServiceShowcaseProps = {
 
 export default function ServiceShowcase({ services, locale, dict }: ServiceShowcaseProps) {
   return (
-    <section className="bg-white py-20">
+    <section className="page-content bg-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="space-y-16">
           {services.map((service, index) => {

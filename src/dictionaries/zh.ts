@@ -36,7 +36,7 @@ export const zh: Dictionary = {
   home: {
     aboutTitle: "关于我们",
     aboutText:
-      "Dabar 是专注于内部物流的安装专家。十多年来，我们专业安装分拣机和智能货架系统，涵盖电气和机械工程。我们为仓库和办公室提供强弱电交钥匙解决方案，并负责工厂生产线的安装。",
+      "Dabar 是专注于内部物流的安装专家。拥有8年经验，我们专业安装分拣机和智能货架系统，涵盖电气和机械工程。我们为仓库和办公室提供强弱电交钥匙解决方案，并负责工厂生产线的安装。",
     servicesTitle: "我们的服务",
     servicesSubtitle: "为您的工业和物流项目提供完整的技术解决方案。",
     servicesLink: "查看所有服务",
@@ -50,9 +50,10 @@ export const zh: Dictionary = {
     testimonialsTitle: "客户评价",
     testimonialsSubtitle: "客户对我们的评价。",
     testimonialsPlaceholder: "评价即将发布",
-    projectsTitle: "近期项目",
-    projectsSubtitle: "了解我们最新的项目成果。",
+    projectsTitle: "项目案例",
+    projectsSubtitle: "输送线、货架与强弱电 — 了解我们在欧洲交付的项目。",
     projectsLink: "查看所有项目",
+    categoryProjectsLabel: "个项目",
     zoneTitle: "服务区域",
     zoneText: "我们在欧洲范围内为您的内部物流和工业项目提供服务。",
   },
@@ -84,6 +85,21 @@ export const zh: Dictionary = {
     sector: "行业",
     location: "地点",
     year: "年份",
+    highlightsTitle: "关键数据",
+    categories: {
+      conveyors: {
+        title: "输送线",
+        subtitle: "自动分拣、交叉带及输送系统集成项目。",
+      },
+      racking: {
+        title: "货架",
+        subtitle: "货架安装、密集库及自动化仓储系统。",
+      },
+      electrical: {
+        title: "强弱电",
+        subtitle: "Wi-Fi网络、监控、布线及强电改造。",
+      },
+    },
   },
   quote: {
     title: "申请报价",
@@ -122,7 +138,7 @@ export const zh: Dictionary = {
     subtitle: "欧洲内部物流和物流项目管理专家。",
     historyTitle: "我们的历史",
     historyPlaceholder:
-      "Dabar 的历史即将在此发布。公司成立于2017年，专注于内部物流安装和工业项目管理。",
+      "公司于2017年在巴黎成立，迅速发展并成为欧洲物流、工业和技术项目领域的重要参与者。\n\n自成立以来，公司专注于复杂项目管理，服务范围涵盖智能物流、电气和机械安装等多个领域。",
     valuesTitle: "我们的价值观",
     values: [
       { title: "可靠", description: "持久耐用的安装，符合标准并按时交付。" },

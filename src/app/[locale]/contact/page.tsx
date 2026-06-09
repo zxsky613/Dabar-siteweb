@@ -29,7 +29,7 @@ export default async function ContactPage({ params }: PageProps) {
     <main>
       <PageHeader title={dict.contact.title} subtitle={dict.contact.subtitle} />
 
-      <section className="py-20">
+      <section className="page-content">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2">
             <FadeIn>
