@@ -44,7 +44,7 @@ export function BackLink({ href, label, className }: BackLinkProps) {
     <Link
       href={href}
       aria-label={label}
-      className={`inline-flex text-blue-light transition-colors hover:text-navy ${className ?? ""}`}
+      className={`interactive-tab inline-flex text-blue-light hover:text-navy ${className ?? ""}`}
     >
       <NavArrow direction="left" />
     </Link>
@@ -64,7 +64,7 @@ export function ArrowButton({ direction, onClick, label, className }: ArrowButto
       type="button"
       onClick={onClick}
       aria-label={label}
-      className={`inline-flex shrink-0 text-blue-light transition-colors hover:text-navy ${className ?? ""}`}
+      className={`interactive-tab inline-flex shrink-0 text-blue-light hover:text-navy ${className ?? ""}`}
     >
       <NavArrow direction={direction} className="h-8 w-8 sm:h-10 sm:w-10" />
     </button>

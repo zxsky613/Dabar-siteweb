@@ -16,7 +16,7 @@ export default function ServiceCard({ service, locale, dict }: ServiceCardProps)
     <FadeIn>
       <Link
         href={`/${locale}/services/${service.slug}`}
-        className="glass-card group flex h-full flex-col p-6 transition-all hover:scale-[1.02] hover:shadow-xl"
+        className="glass-card interactive-card group flex h-full flex-col overflow-hidden p-6"
       >
         <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/50 text-navy transition-colors group-hover:bg-blue-light/20 group-hover:text-blue-light">
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

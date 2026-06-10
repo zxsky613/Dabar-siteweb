@@ -43,12 +43,12 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
         )}
 
         <div className="min-w-0 flex-1">
-          <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-sm">
+          <div className="interactive-card-subtle group overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-sm">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={main}
               alt={`${title} — ${active + 1}/${total}`}
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-[4/3] w-full object-cover interactive-image-zoom"
             />
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function ServiceShowcase({ services, locale, dict }: ServiceShowc
                       imageRight ? "" : "lg:[&>*:first-child]:order-2"
                     }`}
                   >
-                    <div className="glass-card flex flex-col p-8 sm:p-10">
+                    <div className="glass-card interactive-card group flex flex-col p-8 sm:p-10">
                       <p className="text-base leading-relaxed text-gray-600">
                         {t(service.description, locale)}
                       </p>
@@ -55,12 +55,12 @@ export default function ServiceShowcase({ services, locale, dict }: ServiceShowc
                       </Link>
                     </div>
 
-                    <div className="relative min-h-[280px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+                    <div className="interactive-card group relative min-h-[280px] overflow-hidden rounded-2xl sm:min-h-[320px]">
                       <Image
                         src={service.image}
                         alt={t(service.title, locale)}
                         fill
-                        className="object-cover"
+                        className="object-cover interactive-image-zoom"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />

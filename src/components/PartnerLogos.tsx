@@ -20,7 +20,7 @@ export default function PartnerLogos({ title, subtitle }: PartnerLogosProps) {
         <div className="mt-14 flex flex-wrap justify-center gap-4 sm:gap-5">
           {partners.map((partner, i) => (
             <FadeIn key={partner.name} delay={i * 30}>
-              <div className="group flex size-32 items-center justify-center rounded-lg border border-gray-200/80 bg-white p-4 shadow-sm transition-all hover:border-blue-light/40 hover:shadow-md sm:size-36 md:size-40">
+              <div className="interactive-border-card group flex size-32 items-center justify-center rounded-lg border border-gray-200/80 bg-white p-4 shadow-sm sm:size-36 md:size-40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={partner.logo}

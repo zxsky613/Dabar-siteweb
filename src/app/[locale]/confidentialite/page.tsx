@@ -21,7 +21,7 @@ const content = {
     sections: [
       {
         title: "Responsable du traitement",
-        body: `${COMPANY.legalName}\n${COMPANY.address}\n${COMPANY.phone}`,
+        body: `${COMPANY.legalName}\n${COMPANY.address}`,
       },
       {
         title: "Données collectées",
@@ -37,7 +37,7 @@ const content = {
       },
       {
         title: "Vos droits",
-        body: "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous à l'adresse indiquée ci-dessus ou par téléphone.",
+        body: "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous via le formulaire de contact.",
       },
       {
         title: "Cookies",
@@ -49,7 +49,7 @@ const content = {
     sections: [
       {
         title: "Data controller",
-        body: `${COMPANY.legalName}\n${COMPANY.address}\n${COMPANY.phone}`,
+        body: `${COMPANY.legalName}\n${COMPANY.address}`,
       },
       {
         title: "Data collected",
@@ -65,7 +65,7 @@ const content = {
       },
       {
         title: "Your rights",
-        body: "In accordance with GDPR, you have the right to access, rectify, delete and port your data. To exercise these rights, contact us at the address above or by phone.",
+        body: "In accordance with GDPR, you have the right to access, rectify, delete and port your data. To exercise these rights, contact us via the contact form.",
       },
       {
         title: "Cookies",
@@ -77,7 +77,7 @@ const content = {
     sections: [
       {
         title: "数据处理负责人",
-        body: `${COMPANY.legalName}\n${COMPANY.address}\n${COMPANY.phone}`,
+        body: `${COMPANY.legalName}\n${COMPANY.address}`,
       },
       {
         title: "收集的数据",
@@ -93,7 +93,7 @@ const content = {
       },
       {
         title: "您的权利",
-        body: "根据 GDPR，您有权访问、更正、删除和移植您的数据。如需行使这些权利，请通过上述地址或电话联系我们。",
+        body: "根据 GDPR，您有权访问、更正、删除和移植您的数据。如需行使这些权利，请通过联系表单与我们联系。",
       },
       {
         title: "Cookie",

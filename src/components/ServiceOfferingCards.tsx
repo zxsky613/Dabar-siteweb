@@ -23,13 +23,13 @@ export default function ServiceOfferingCards({
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {offerings.map((offering, index) => (
           <FadeIn key={offering.id} delay={index * 60}>
-            <article className="flex h-full flex-col rounded-2xl bg-gray-50 p-5 sm:p-6">
+            <article className="interactive-border-card group flex h-full flex-col rounded-2xl border border-gray-100 bg-gray-50 p-5 sm:p-6">
               <div className="relative mb-5 aspect-[4/3] overflow-hidden rounded-xl border border-white/70 bg-white shadow-sm">
                 <Image
                   src={offering.image}
                   alt={t(offering.title, locale)}
                   fill
-                  className="object-cover"
+                  className="object-cover interactive-image-zoom"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

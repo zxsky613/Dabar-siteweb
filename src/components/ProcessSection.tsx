@@ -19,7 +19,7 @@ export default function ProcessSection({ dict }: ProcessSectionProps) {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {dict.process.steps.map((step, i) => (
             <FadeIn key={step.title} delay={i * 100} className="h-full">
-              <div className="glass-card flex h-full flex-col p-6">
+              <div className="glass-card interactive-card flex h-full flex-col p-6">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy/90 text-sm font-bold text-white">
                   {i + 1}
                 </span>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import FormSelect from "@/components/FormSelect";
+import SuccessModal from "@/components/SuccessModal";
 import type { Dictionary } from "@/dictionaries/fr";
 
 type DevisFormProps = {
@@ -9,7 +11,9 @@ type DevisFormProps = {
 };
 
 export default function DevisForm({ dict, mailConfigured }: DevisFormProps) {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [formResetKey, setFormResetKey] = useState(0);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,8 +30,10 @@ export default function DevisForm({ dict, mailConfigured }: DevisFormProps) {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Failed");
-      setStatus("success");
       form.reset();
+      setFormResetKey((key) => key + 1);
+      setStatus("idle");
+      setShowSuccess(true);
     } catch {
       setStatus("error");
     }
@@ -36,16 +42,21 @@ export default function DevisForm({ dict, mailConfigured }: DevisFormProps) {
   const inputClass =
     "w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-blue-light focus:ring-2 focus:ring-blue-light/20";
 
-  if (status === "success") {
-    return (
-      <div className="rounded-xl border border-green-200 bg-green-50 p-8 text-center">
-        <p className="text-green-800">{dict.quote.success}</p>
-      </div>
-    );
-  }
+  const projectTypeOptions = dict.projectTypes.map((type) => ({
+    value: type,
+    label: type,
+  }));
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <>
+      <SuccessModal
+        open={showSuccess}
+        onClose={() => setShowSuccess(false)}
+        title={dict.quote.successTitle}
+        message={dict.quote.successMessage}
+        closeLabel={dict.quote.successClose}
+      />
+      <form onSubmit={handleSubmit} className="space-y-5">
       {!mailConfigured && (
         <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           {dict.quote.mailNotConfigured}
@@ -93,14 +104,15 @@ export default function DevisForm({ dict, mailConfigured }: DevisFormProps) {
         <label htmlFor="projectType" className="mb-1.5 block text-sm font-medium text-gray-600">
           {dict.quote.projectType} *
         </label>
-        <select id="projectType" name="projectType" required className={inputClass}>
-          <option value="">{dict.quote.projectTypePlaceholder}</option>
-          {dict.projectTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
+        <FormSelect
+          id="projectType"
+          name="projectType"
+          placeholder={dict.quote.projectTypePlaceholder}
+          options={projectTypeOptions}
+          required
+          inputClassName={inputClass}
+          resetKey={formResetKey}
+        />
       </div>
 
       <div>
@@ -125,10 +137,11 @@ export default function DevisForm({ dict, mailConfigured }: DevisFormProps) {
       <button
         type="submit"
         disabled={!mailConfigured || status === "loading"}
-        className="w-full rounded-lg bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-dark disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        className="btn-interactive w-full rounded-lg bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy-dark disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
       >
         {status === "loading" ? dict.quote.sending : dict.quote.submit}
       </button>
     </form>
+    </>
   );
 }

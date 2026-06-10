@@ -17,7 +17,7 @@ export default function ProjectCard({ project, locale }: ProjectCardProps) {
     <FadeIn className="h-full">
       <Link
         href={`/${locale}/realisations/${project.slug}`}
-        className="glass-card group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-xl"
+        className="glass-card interactive-card group flex h-full flex-col overflow-hidden"
       >
         <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-gray-100">
           {imageSrc ? (
@@ -25,7 +25,7 @@ export default function ProjectCard({ project, locale }: ProjectCardProps) {
             <img
               src={imageSrc}
               alt={t(project.title, locale)}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover interactive-image-zoom"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center text-gray-400">

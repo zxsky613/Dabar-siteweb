@@ -64,8 +64,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           <FadeIn>
             <div className="mt-14 text-center">
               <Link
-                href={`/${locale}/devis`}
-                className="inline-flex rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-navy-dark"
+                href={`/${locale}/contact`}
+                className="btn-interactive inline-flex rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-white hover:bg-navy-dark"
               >
                 {dict.hero.ctaQuote}
               </Link>

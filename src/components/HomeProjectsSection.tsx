@@ -45,7 +45,7 @@ export default function HomeProjectsSection({ locale, dict }: HomeProjectsSectio
           <div className="mt-10 text-center">
             <Link
               href={`/${locale}/realisations`}
-              className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-navy-dark hover:shadow-lg"
+              className="btn-interactive inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-md hover:bg-navy-dark"
             >
               {dict.home.projectsLink}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
@@ -74,7 +74,7 @@ function CategoryCard({ category, locale, dict, image, delay }: CategoryCardProp
     <FadeIn delay={delay}>
       <Link
         href={`/${locale}/realisations?category=${category}`}
-        className="group block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-blue-light/40 hover:shadow-lg"
+        className="interactive-border-card group block h-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
       >
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
@@ -83,7 +83,7 @@ function CategoryCard({ category, locale, dict, image, delay }: CategoryCardProp
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             quality={90}
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className="object-cover object-center interactive-image-zoom"
           />
         </div>
         <div className="p-4 sm:p-5">

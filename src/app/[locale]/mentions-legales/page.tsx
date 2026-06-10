@@ -21,7 +21,7 @@ const content = {
     sections: [
       {
         title: "Éditeur du site",
-        body: `Le site ${COMPANY.domain} est édité par la société ${COMPANY.legalName}, SIREN ${COMPANY.siren}.\n\nSiège social : ${COMPANY.address}\nTéléphone : ${COMPANY.phone}`,
+        body: `Le site ${COMPANY.domain} est édité par la société ${COMPANY.legalName}, SIREN ${COMPANY.siren}.\n\nSiège social : ${COMPANY.address}`,
       },
       {
         title: "Directeur de la publication",
@@ -45,7 +45,7 @@ const content = {
     sections: [
       {
         title: "Website publisher",
-        body: `The website ${COMPANY.domain} is published by ${COMPANY.legalName}, SIREN ${COMPANY.siren}.\n\nRegistered office: ${COMPANY.address}\nPhone: ${COMPANY.phone}`,
+        body: `The website ${COMPANY.domain} is published by ${COMPANY.legalName}, SIREN ${COMPANY.siren}.\n\nRegistered office: ${COMPANY.address}`,
       },
       {
         title: "Publication director",
@@ -69,7 +69,7 @@ const content = {
     sections: [
       {
         title: "网站发布者",
-        body: `网站 ${COMPANY.domain} 由 ${COMPANY.legalName} 发布，SIREN ${COMPANY.siren}。\n\n注册地址：${COMPANY.address}\n电话：${COMPANY.phone}`,
+        body: `网站 ${COMPANY.domain} 由 ${COMPANY.legalName} 发布，SIREN ${COMPANY.siren}。\n\n注册地址：${COMPANY.address}`,
       },
       {
         title: "出版负责人",

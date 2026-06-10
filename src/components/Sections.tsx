@@ -19,8 +19,8 @@ export function StatsSection({ dict }: { dict: Dictionary }) {
         </FadeIn>
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {stats.map((stat, i) => (
-            <FadeIn key={stat.label} delay={i * 80}>
-              <div className="glass-card p-6 text-center">
+            <FadeIn key={stat.label} delay={i * 80} className="h-full">
+              <div className="glass-card interactive-card h-full p-6 text-center">
                 <p className="text-3xl font-bold text-navy sm:text-4xl">{stat.value}</p>
                 <p className="mt-2 text-sm text-gray-600">{stat.label}</p>
               </div>

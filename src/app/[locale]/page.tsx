@@ -48,7 +48,7 @@ export default async function HomePage({ params }: PageProps) {
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:justify-start">
                 <Link
                   href={`/${locale}/contact`}
-                  className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-navy-dark hover:scale-[1.02]"
+                  className="btn-interactive inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-lg hover:bg-navy-dark"
                 >
                   {dict.hero.ctaContact}
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +57,7 @@ export default async function HomePage({ params }: PageProps) {
                 </Link>
                 <Link
                   href={`/${locale}/services`}
-                  className="inline-flex rounded-full border border-navy/20 px-7 py-3 text-sm font-semibold text-navy transition-all hover:border-navy hover:bg-gray-50"
+                  className="btn-interactive inline-flex rounded-full border border-navy/20 px-7 py-3 text-sm font-semibold text-navy hover:border-navy hover:bg-gray-50"
                 >
                   {dict.hero.ctaServices}
                 </Link>

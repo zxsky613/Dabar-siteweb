@@ -12,11 +12,11 @@ export default function PartnerMarquee({ label, variant = "light", compact = fal
   const tileClass =
     variant === "dark"
       ? compact
-        ? "flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md sm:size-24"
-        : "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md sm:size-28"
+        ? "interactive-border-card flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md sm:size-24"
+        : "interactive-border-card flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-md sm:size-28"
       : compact
-        ? "flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-3 shadow-sm backdrop-blur-md sm:size-24"
-        : "flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-4 shadow-sm backdrop-blur-md sm:size-28";
+        ? "interactive-border-card flex size-20 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-3 shadow-sm backdrop-blur-md sm:size-24"
+        : "interactive-border-card flex size-24 shrink-0 items-center justify-center rounded-xl border border-white/70 bg-white/50 p-4 shadow-sm backdrop-blur-md sm:size-28";
 
   const labelClass =
     variant === "dark"

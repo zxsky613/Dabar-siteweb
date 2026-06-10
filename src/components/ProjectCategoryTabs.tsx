@@ -44,7 +44,7 @@ export default function ProjectCategoryTabs({
               key={category}
               type="button"
               onClick={() => setActive(category)}
-              className={`rounded-full px-4 py-2.5 text-sm font-semibold transition-all sm:px-5 ${
+              className={`interactive-tab rounded-full px-4 py-2.5 text-sm font-semibold sm:px-5 ${
                 isActive
                   ? "bg-navy text-white shadow-md"
                   : "border border-gray-200 bg-white text-navy hover:border-blue-light hover:text-blue-light"
@@ -78,7 +78,7 @@ export default function ProjectCategoryTabs({
         <div className="mt-10 text-center">
           <Link
             href={viewAllHref}
-            className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-navy-dark hover:shadow-lg"
+            className="btn-interactive inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3 text-sm font-semibold text-white shadow-md hover:bg-navy-dark"
           >
             {viewAllLabel}
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>

@@ -82,7 +82,7 @@ export function ProjectDetailView({
                     {project.highlights.map((item) => (
                       <div
                         key={t(item.label, locale)}
-                        className="rounded-xl border border-gray-200 bg-white p-3 text-center shadow-sm"
+                        className="interactive-border-card rounded-xl border border-gray-200 bg-white p-3 text-center shadow-sm"
                       >
                         <p className="text-xl font-bold text-navy">{item.value}</p>
                         <p className="mt-1 text-xs leading-snug text-gray-500">{t(item.label, locale)}</p>
@@ -108,7 +108,7 @@ export function ProjectDetailView({
               <div className="mt-8 text-center">
                 <Link
                   href={`/${locale}/contact`}
-                  className="inline-block rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-dark"
+                  className="btn-interactive inline-block rounded-lg bg-navy px-5 py-2.5 text-sm font-semibold text-white hover:bg-navy-dark"
                 >
                   {contactLabel}
                 </Link>
