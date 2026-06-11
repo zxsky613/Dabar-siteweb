@@ -13,6 +13,8 @@ type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   return services.flatMap((service) =>
     ["fr", "en", "zh"].map((locale) => ({ locale, slug: service.slug }))

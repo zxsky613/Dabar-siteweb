@@ -87,6 +87,7 @@ export const en: Dictionary = {
     location: "Location",
     year: "Year",
     highlightsTitle: "Key figures",
+    ctaHint: "Have a similar project in mind? Let's talk.",
     categories: {
       conveyors: {
         title: "Conveyors",

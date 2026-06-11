@@ -86,6 +86,7 @@ export const zh: Dictionary = {
     location: "地点",
     year: "年份",
     highlightsTitle: "关键数据",
+    ctaHint: "有类似项目？欢迎与我们联系。",
     categories: {
       conveyors: {
         title: "输送线",

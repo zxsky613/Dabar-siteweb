@@ -38,7 +38,7 @@ export const projects: Project[] = [
       en: "Mechanical & electrical installation",
       zh: "机械电气安装",
     },
-    location: { fr: "Pays-Bas", en: "Netherlands", zh: "荷兰" },
+    location: { fr: "Amsterdam, Pays-Bas", en: "Amsterdam, Netherlands", zh: "荷兰阿姆斯特丹" },
     description: {
       fr: "Installation et mise en service d'un système de tri double étage avec convoyeurs à bande pour GOFO, incluant plateformes métalliques et ligne de tri haute cadence.",
       en: "Installation and commissioning of a dual-level sorting system with belt conveyors for GOFO, including steel platforms and a high-throughput sortation line.",

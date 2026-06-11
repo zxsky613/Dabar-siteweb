@@ -85,6 +85,7 @@ export const fr = {
     location: "Localisation",
     year: "Année",
     highlightsTitle: "Chiffres clés",
+    ctaHint: "Un projet similaire en tête ? Parlons-en.",
     categories: {
       conveyors: {
         title: "Convoyeurs",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { ArrowButton } from "@/components/NavArrow";
+import { NavArrow } from "@/components/NavArrow";
 
 type ProjectGalleryProps = {
   images: string[];
@@ -32,48 +32,72 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
   if (total === 0) return null;
 
   const main = images[active] ?? images[0];
+  const arrowButtonClass =
+    "absolute top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy shadow-md backdrop-blur-sm transition-all hover:scale-105 hover:bg-white opacity-0 group-hover:opacity-100 focus-visible:opacity-100";
 
   return (
-    <div className="mx-auto w-full max-w-xl sm:max-w-2xl">
-      <div className="flex items-center justify-center gap-3 sm:gap-6">
-        {total > 1 ? (
-          <ArrowButton direction="left" onClick={goPrev} label="Photo précédente" />
-        ) : (
-          <span className="hidden w-8 shrink-0 sm:block sm:w-10" aria-hidden />
-        )}
+    <div className="mx-auto w-full max-w-2xl">
+      <div className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-md">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={main}
+          alt={`${title} — ${active + 1}/${total}`}
+          className="aspect-[16/10] w-full object-cover"
+        />
 
-        <div className="min-w-0 flex-1">
-          <div className="interactive-card-subtle group overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-sm">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={main}
-              alt={`${title} — ${active + 1}/${total}`}
-              className="aspect-[4/3] w-full object-cover interactive-image-zoom"
-            />
-          </div>
-        </div>
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-navy/25 to-transparent"
+          aria-hidden
+        />
 
-        {total > 1 ? (
-          <ArrowButton direction="right" onClick={goNext} label="Photo suivante" />
-        ) : (
-          <span className="hidden w-8 shrink-0 sm:block sm:w-10" aria-hidden />
+        {total > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={goPrev}
+              aria-label="Photo précédente"
+              className={`${arrowButtonClass} left-3`}
+            >
+              <NavArrow direction="left" className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              aria-label="Photo suivante"
+              className={`${arrowButtonClass} right-3`}
+            >
+              <NavArrow direction="right" className="h-5 w-5" />
+            </button>
+
+            <span className="absolute bottom-3 right-3 rounded-full bg-navy/70 px-2.5 py-1 text-xs font-medium tabular-nums text-white backdrop-blur-sm">
+              {active + 1} / {total}
+            </span>
+          </>
         )}
       </div>
 
       {total > 1 && (
-        <div className="mt-5 flex items-center justify-center gap-2">
-          {images.map((src, index) => (
-            <button
-              key={src}
-              type="button"
-              onClick={() => setActive(index)}
-              className={`h-1.5 rounded-full transition-all ${
-                active === index ? "w-6 bg-navy" : "w-1.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`${title} — photo ${index + 1}`}
-              aria-current={active === index ? "true" : undefined}
-            />
-          ))}
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+          {images.map((src, index) => {
+            const isActive = active === index;
+            return (
+              <button
+                key={src}
+                type="button"
+                onClick={() => setActive(index)}
+                aria-label={`${title} — photo ${index + 1}`}
+                aria-current={isActive ? "true" : undefined}
+                className={`relative w-16 shrink-0 overflow-hidden rounded-lg border transition-all sm:w-20 ${
+                  isActive
+                    ? "border-blue-light ring-2 ring-blue-light/40"
+                    : "border-gray-200 opacity-60 hover:opacity-100"
+                }`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" className="aspect-[4/3] w-full object-cover" />
+              </button>
+            );
+          })}
         </div>
       )}
     </div>
