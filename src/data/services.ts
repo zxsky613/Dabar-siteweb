@@ -276,20 +276,6 @@ export const services: Service[] = [
           zh: "为仓库、车间和生产区域安装照明，兼顾安全与节能。",
         },
       },
-      {
-        id: "mise-aux-normes",
-        image: "/services/offerings/reamenagement-electrique/mise-aux-normes.jpg",
-        title: {
-          fr: "Mise aux normes et sécurité électrique",
-          en: "Electrical compliance and safety upgrades",
-          zh: "电气合规与安全升级",
-        },
-        description: {
-          fr: "Audit, mise en conformité et sécurisation de vos installations électriques selon les normes en vigueur.",
-          en: "Audit, compliance and securing of your electrical installations according to current standards.",
-          zh: "依据现行标准，对电气设施进行审计、合规整改与安全加固。",
-        },
-      },
     ],
   },
   {

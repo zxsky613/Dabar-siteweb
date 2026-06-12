@@ -41,8 +41,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   return (
     <main>
       <section className="bg-white pt-3">
-        <div className="mx-auto max-w-6xl px-6">
-          <BackLink href={`/${locale}/services`} label={dict.services.back} />
+        <div className="px-6 sm:px-10">
+          <div className="mx-auto max-w-6xl">
+            <BackLink href={`/${locale}/services`} label={dict.services.back} />
+          </div>
         </div>
       </section>
 

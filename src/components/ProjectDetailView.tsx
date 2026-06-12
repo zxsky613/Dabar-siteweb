@@ -13,6 +13,7 @@ type ProjectDetailViewProps = {
   backLabel: string;
   contactLabel: string;
   highlightsTitle: string;
+  clientsTitle: string;
   locationLabel: string;
   yearLabel: string;
   categoryLabel?: string;
@@ -26,6 +27,7 @@ export default function ProjectDetailView({
   backLabel,
   contactLabel,
   highlightsTitle,
+  clientsTitle,
   locationLabel,
   yearLabel,
   categoryLabel,
@@ -36,10 +38,17 @@ export default function ProjectDetailView({
   return (
     <main>
       <section className="bg-white pb-12 pt-2 sm:pb-16 sm:pt-3">
+        {/* Aligné sur le bord gauche de l'en-tête (même structure de conteneur que la navbar) */}
+        <div className="px-6 sm:px-10">
+          <div className="mx-auto max-w-6xl">
+            <FadeIn>
+              <BackLink href={backHref} label={backLabel} />
+            </FadeIn>
+          </div>
+        </div>
         <div className="mx-auto max-w-6xl px-6 sm:px-10">
-          {/* En-tête : retour, catégorie, titre, méta */}
+          {/* En-tête : catégorie, titre, méta */}
           <FadeIn>
-            <BackLink href={backHref} label={backLabel} />
             <div className="mx-auto mt-2 max-w-3xl text-center">
               {categoryLabel && (
                 <span className="inline-flex items-center rounded-full bg-blue-light/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-light">
@@ -76,7 +85,7 @@ export default function ProjectDetailView({
 
           {/* Galerie à gauche, contenu à droite */}
           <FadeIn delay={75}>
-            <div className="mt-7 grid gap-8 sm:mt-9 lg:grid-cols-[7fr_5fr] lg:items-center lg:gap-12">
+            <div className="mt-7 grid gap-8 sm:mt-9 lg:grid-cols-[7fr_5fr] lg:items-start lg:gap-12">
               <ProjectGallery images={galleryImages} title={t(project.title, locale)} />
 
               <div>
@@ -86,10 +95,8 @@ export default function ProjectDetailView({
 
                 {project.highlights && project.highlights.length > 0 && (
                   <div className="mt-8">
-                    <h2 className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-blue-light lg:text-left">
-                      {highlightsTitle}
-                    </h2>
-                    <div className="mt-4 grid grid-cols-2 gap-3 sm:gap-4">
+                    <h2 className="sr-only">{highlightsTitle}</h2>
+                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
                       {project.highlights.map((item) => (
                         <div
                           key={t(item.label, locale)}
@@ -97,6 +104,28 @@ export default function ProjectDetailView({
                         >
                           <p className="text-2xl font-bold tracking-tight text-navy">{item.value}</p>
                           <p className="mt-1.5 text-xs leading-snug text-gray-500">{t(item.label, locale)}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {project.clients && project.clients.length > 0 && (
+                  <div className="mt-6">
+                    <h2 className="sr-only">{clientsTitle}</h2>
+                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                      {project.clients.map((client) => (
+                        <div
+                          key={client.name}
+                          className="h-20 w-36 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={client.logo}
+                            alt={client.name}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
                         </div>
                       ))}
                     </div>

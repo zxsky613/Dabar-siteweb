@@ -8,6 +8,11 @@ export type ProjectHighlight = {
   label: LocalizedText;
 };
 
+export type ProjectClient = {
+  name: string;
+  logo: string;
+};
+
 export type Project = {
   slug: string;
   category: ProjectCategory;
@@ -19,6 +24,7 @@ export type Project = {
   image?: string;
   images?: string[];
   highlights?: ProjectHighlight[];
+  clients?: ProjectClient[];
   published: boolean;
 };
 
@@ -50,6 +56,10 @@ export const projects: Project[] = [
       { value: "950 m²", label: { fr: "Plateformes acier", en: "Steel platforms", zh: "钢平台面积" } },
       { value: "18 000", label: { fr: "PPH (colis/h)", en: "PPH (parcels/h)", zh: "小时分拣量" } },
     ],
+    clients: [
+      { name: "GOFO", logo: "/partners/gofo.png" },
+      { name: "KENGIC", logo: "/partners/kengic.png" },
+    ],
   },
   {
     slug: "cirro-france",
@@ -77,6 +87,10 @@ export const projects: Project[] = [
       { value: "386 m", label: { fr: "Convoyeurs à bande", en: "Belt conveyors", zh: "配套皮带机" } },
       { value: "600 m²", label: { fr: "Plateformes acier", en: "Steel platforms", zh: "钢平台面积" } },
       { value: "20 000", label: { fr: "PPH (colis/h)", en: "PPH (parcels/h)", zh: "小时分拣量" } },
+    ],
+    clients: [
+      { name: "CIRRO", logo: "/partners/cirro.png" },
+      { name: "Wayzim", logo: "/partners/wayzim.png" },
     ],
   },
   {
@@ -106,6 +120,10 @@ export const projects: Project[] = [
       { value: "12 m", label: { fr: "Spirale d'élévation", en: "Spiral elevator height", zh: "螺旋升降机高度" } },
       { value: "5 000", label: { fr: "PPH (colis/h)", en: "PPH (parcels/h)", zh: "小时分拣量" } },
     ],
+    clients: [
+      { name: "JD.com", logo: "/partners/jd-com.png" },
+      { name: "KENGIC", logo: "/partners/kengic.png" },
+    ],
   },
   {
     slug: "faxing-france",
@@ -113,9 +131,9 @@ export const projects: Project[] = [
     image: "/projects/faxing-france.jpg",
     published: true,
     title: {
-      fr: "法翔 — tri cross-belt simple étage",
-      en: "Faxing — single-level cross-belt sorter",
-      zh: "法翔 — 单层交叉带分拣项目",
+      fr: "FTL Express — tri cross-belt simple étage",
+      en: "FTL Express — single-level cross-belt sorter",
+      zh: "法翔速运 — 单层交叉带分拣项目",
     },
     sector: {
       fr: "Installation mécanique & électrique",
@@ -133,6 +151,10 @@ export const projects: Project[] = [
       { value: "210 m", label: { fr: "Convoyeurs à bande", en: "Belt conveyors", zh: "配套皮带机" } },
       { value: "280 m²", label: { fr: "Plateformes acier", en: "Steel platforms", zh: "钢平台面积" } },
       { value: "8 000", label: { fr: "PPH (colis/h)", en: "PPH (parcels/h)", zh: "小时分拣量" } },
+    ],
+    clients: [
+      { name: "FTL Express", logo: "/partners/ftl-express.png" },
+      { name: "SIMBA", logo: "/partners/simba.png" },
     ],
   },
   {

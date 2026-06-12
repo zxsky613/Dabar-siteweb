@@ -38,11 +38,19 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
   return (
     <div className="mx-auto w-full max-w-2xl">
       <div className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-md">
+        {/* Fond flouté pour remplir le cadre quand la photo n'est pas au format 16/10 */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={main}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full scale-110 object-cover opacity-60 blur-xl"
+        />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={main}
           alt={`${title} — ${active + 1}/${total}`}
-          className="aspect-[16/10] w-full object-cover"
+          className="relative aspect-[16/10] w-full object-contain"
         />
 
         <div

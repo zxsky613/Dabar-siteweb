@@ -43,6 +43,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       backLabel={dict.projects.back}
       contactLabel={dict.hero.ctaContact}
       highlightsTitle={dict.projects.highlightsTitle}
+      clientsTitle={dict.projects.clientsTitle}
       locationLabel={dict.projects.location}
       yearLabel={dict.projects.year}
       categoryLabel={dict.projects.categories[project.category].title}

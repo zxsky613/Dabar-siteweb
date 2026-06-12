@@ -73,7 +73,7 @@ export const en: Dictionary = {
       "With our experienced team, we offer a range of installation and engineering services for your logistics and industrial projects.",
     learnMore: "Learn more",
     offeringsTitle: "What we deliver",
-    back: "Back to services",
+    back: "Back",
     notFound: "Service not found",
   },
   projects: {
@@ -81,12 +81,13 @@ export const en: Dictionary = {
     subtitle: "Browse all our projects and client case studies.",
     empty: "Projects will be published soon.",
     emptyHint: "Check back soon to discover our achievements.",
-    back: "Back to projects",
+    back: "Back",
     notFound: "Project not found",
     sector: "Sector",
     location: "Location",
     year: "Year",
     highlightsTitle: "Key figures",
+    clientsTitle: "Clients",
     ctaHint: "Have a similar project in mind? Let's talk.",
     categories: {
       conveyors: {

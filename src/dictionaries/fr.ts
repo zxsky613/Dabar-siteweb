@@ -71,7 +71,7 @@ export const fr = {
       "Grâce à notre équipe expérimentée, nous sommes en mesure de vous proposer différents services d'installation et d'ingénierie pour vos projets logistiques et industriels.",
     learnMore: "En savoir plus",
     offeringsTitle: "Nos prestations",
-    back: "Retour aux services",
+    back: "Retour",
     notFound: "Service introuvable",
   },
   projects: {
@@ -79,12 +79,13 @@ export const fr = {
     subtitle: "Retrouvez l'ensemble de nos projets et cas clients.",
     empty: "Les projets seront publiés prochainement.",
     emptyHint: "Revenez bientôt pour découvrir nos réalisations.",
-    back: "Retour aux réalisations",
+    back: "Retour",
     notFound: "Projet introuvable",
     sector: "Secteur",
     location: "Localisation",
     year: "Année",
     highlightsTitle: "Chiffres clés",
+    clientsTitle: "Clients",
     ctaHint: "Un projet similaire en tête ? Parlons-en.",
     categories: {
       conveyors: {

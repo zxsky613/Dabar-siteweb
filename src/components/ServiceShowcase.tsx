@@ -16,27 +16,29 @@ export default function ServiceShowcase({ services, locale, dict }: ServiceShowc
   return (
     <section className="page-content bg-white">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-10">
           {services.map((service, index) => {
             const imageRight = index % 2 === 0;
 
             return (
               <FadeIn key={service.slug} delay={index * 80}>
-                <article>
-                  <h2 className="mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
-                    {t(service.title, locale)}
-                  </h2>
-
-                  <div
-                    className={`grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8 ${
+                <Link
+                  href={`/${locale}/services/${service.slug}`}
+                  className="glass-card interactive-card group block overflow-hidden"
+                >
+                  <article
+                    className={`grid lg:grid-cols-2 ${
                       imageRight ? "" : "lg:[&>*:first-child]:order-2"
                     }`}
                   >
-                    <div className="glass-card interactive-card group flex flex-col p-8 sm:p-10">
-                      <p className="text-base leading-relaxed text-gray-600">
+                    <div className="flex flex-col justify-center p-6 sm:p-8">
+                      <h2 className="text-xl font-bold text-navy transition-colors group-hover:text-blue-light sm:text-2xl">
+                        {t(service.title, locale)}
+                      </h2>
+                      <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">
                         {t(service.description, locale)}
                       </p>
-                      <ul className="mt-6 space-y-2">
+                      <ul className="mt-4 space-y-1.5">
                         {tl(service.features, locale)
                           .slice(0, 3)
                           .map((feature) => (
@@ -46,16 +48,13 @@ export default function ServiceShowcase({ services, locale, dict }: ServiceShowc
                             </li>
                           ))}
                       </ul>
-                      <Link
-                        href={`/${locale}/services/${service.slug}`}
-                        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-light transition-colors hover:text-navy"
-                      >
+                      <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-light transition-all group-hover:gap-3 group-hover:text-navy">
                         {dict.services.learnMore}
                         <span aria-hidden>→</span>
-                      </Link>
+                      </span>
                     </div>
 
-                    <div className="interactive-card group relative min-h-[280px] overflow-hidden rounded-2xl sm:min-h-[320px]">
+                    <div className="relative min-h-[200px] overflow-hidden sm:min-h-[250px]">
                       <Image
                         src={service.image}
                         alt={t(service.title, locale)}
@@ -63,10 +62,10 @@ export default function ServiceShowcase({ services, locale, dict }: ServiceShowc
                         className="object-cover interactive-image-zoom"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/15 to-transparent" aria-hidden />
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               </FadeIn>
             );
           })}

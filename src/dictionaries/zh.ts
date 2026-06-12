@@ -72,7 +72,7 @@ export const zh: Dictionary = {
     subtitle: "凭借经验丰富的团队，我们为您的物流和工业项目提供多种安装和工程服务。",
     learnMore: "了解更多",
     offeringsTitle: "我们的服务内容",
-    back: "返回服务列表",
+    back: "返回",
     notFound: "未找到该服务",
   },
   projects: {
@@ -80,12 +80,13 @@ export const zh: Dictionary = {
     subtitle: "浏览我们所有的项目和客户案例。",
     empty: "项目案例即将发布。",
     emptyHint: "请稍后回来查看我们的项目成果。",
-    back: "返回项目列表",
+    back: "返回",
     notFound: "未找到该项目",
     sector: "行业",
     location: "地点",
     year: "年份",
     highlightsTitle: "关键数据",
+    clientsTitle: "客户",
     ctaHint: "有类似项目？欢迎与我们联系。",
     categories: {
       conveyors: {

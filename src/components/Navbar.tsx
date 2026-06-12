@@ -59,70 +59,72 @@ export default function Navbar({ locale, dict }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 px-4 pt-4 transition-transform duration-300 sm:px-6 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-navy/95 px-4 py-2.5 shadow-lg backdrop-blur-xl transition-all duration-300 sm:px-6 ${
+        className={`border-b border-white/10 bg-navy/95 shadow-lg backdrop-blur-xl transition-all duration-300 ${
           scrolled ? "bg-navy shadow-xl" : ""
         }`}
       >
-        <Link
-          href={`/${locale}`}
-          className="flex shrink-0 items-center rounded-lg bg-white px-3 py-1.5"
-        >
-          <Image
-            src="/logo.png"
-            alt="Dabar"
-            width={120}
-            height={36}
-            className="h-7 w-auto"
-            priority
-          />
-        </Link>
-
-        <div className="hidden items-center gap-1 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-all ${
-                isActive(link.href, link.exact)
-                  ? "bg-white/15 text-white shadow-sm"
-                  : "text-white/75 hover:bg-white/10 hover:text-white"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} variant="dark" />
-        </div>
-
-        <div className="flex items-center gap-2 lg:hidden">
-          <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} compact variant="dark" />
-          <button
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white"
-            aria-label="Menu"
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 sm:px-10">
+          <Link
+            href={`/${locale}`}
+            className="flex shrink-0 items-center rounded-lg bg-white px-3 py-1.5"
           >
-            {menuOpen ? (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+            <Image
+              src="/logo.png"
+              alt="Dabar"
+              width={120}
+              height={36}
+              className="h-7 w-auto"
+              priority
+            />
+          </Link>
+
+          <div className="hidden items-center gap-1 lg:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-all ${
+                  isActive(link.href, link.exact)
+                    ? "bg-white/15 text-white shadow-sm"
+                    : "text-white/75 hover:bg-white/10 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} variant="dark" />
+          </div>
+
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} compact variant="dark" />
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white"
+              aria-label="Menu"
+            >
+              {menuOpen ? (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 
       {menuOpen && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-navy/95 px-4 py-3 shadow-lg backdrop-blur-xl lg:hidden">
-          <div className="flex flex-col gap-1">
+        <div className="border-b border-white/10 bg-navy/95 shadow-lg backdrop-blur-xl lg:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-3 sm:px-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
