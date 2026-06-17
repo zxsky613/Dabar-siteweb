@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -68,17 +68,17 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           scrolled ? "bg-navy shadow-xl" : ""
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 sm:px-10">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 sm:px-10 sm:py-4">
           <Link
             href={`/${locale}`}
-            className="flex shrink-0 items-center rounded-lg bg-white px-3 py-1.5"
+            className="flex shrink-0 items-center rounded-lg bg-white px-3.5 py-2"
           >
             <Image
               src="/logo.png"
               alt="Dabar"
-              width={120}
-              height={36}
-              className="h-7 w-auto"
+              width={150}
+              height={45}
+              className="h-9 w-auto"
               priority
             />
           </Link>
@@ -97,11 +97,15 @@ export default function Navbar({ locale, dict }: NavbarProps) {
                 {link.label}
               </Link>
             ))}
-            <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} variant="dark" />
+            <Suspense fallback={null}>
+              <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} variant="dark" />
+            </Suspense>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} compact variant="dark" />
+            <Suspense fallback={null}>
+              <LanguageSwitcher locale={locale} locales={locales} labels={localeLabels} compact variant="dark" />
+            </Suspense>
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}

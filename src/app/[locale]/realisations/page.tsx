@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { EmptyProjects } from "@/components/ProjectCard";
 import PageHeader from "@/components/PageHeader";
 import ProjectCategoryTabs from "@/components/ProjectCategoryTabs";
@@ -35,12 +36,14 @@ export default async function ProjectsPage({ params, searchParams }: PageProps) 
       <section className="page-content">
         <div className="mx-auto max-w-6xl px-6">
           {publishedProjects.length > 0 ? (
-            <ProjectCategoryTabs
-              grouped={grouped}
-              locale={locale}
-              dict={dict}
-              initialCategory={initialCategory}
-            />
+            <Suspense fallback={<div className="h-96" aria-hidden />}>
+              <ProjectCategoryTabs
+                grouped={grouped}
+                locale={locale}
+                dict={dict}
+                initialCategory={initialCategory}
+              />
+            </Suspense>
           ) : (
             <EmptyProjects dict={dict} />
           )}

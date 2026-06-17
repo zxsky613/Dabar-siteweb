@@ -39,7 +39,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     <ProjectDetailView
       project={project}
       locale={locale}
-      backHref={`/${locale}/realisations`}
+      backHref={`/${locale}/realisations?category=${project.category}`}
       backLabel={dict.projects.back}
       contactLabel={dict.hero.ctaContact}
       highlightsTitle={dict.projects.highlightsTitle}

@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import type { Dictionary } from "@/dictionaries/fr";
 import type { Project, ProjectCategory } from "@/data/projects";
-import { PROJECT_CATEGORIES } from "@/data/projects";
+import { PROJECT_CATEGORIES, isProjectCategory } from "@/data/projects";
 import type { Locale } from "@/lib/i18n/config";
 
 type ProjectCategoryTabsProps = {
@@ -27,7 +28,23 @@ export default function ProjectCategoryTabs({
   viewAllLabel,
   initialCategory,
 }: ProjectCategoryTabsProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [active, setActive] = useState<ProjectCategory>(initialCategory ?? "conveyors");
+
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (categoryParam && isProjectCategory(categoryParam)) {
+      setActive(categoryParam);
+    }
+  }, [searchParams]);
+
+  function selectCategory(category: ProjectCategory) {
+    setActive(category);
+    router.replace(`${pathname}?category=${category}`, { scroll: false });
+  }
+
   const activeProjects = grouped[active];
   const displayedProjects = limit ? activeProjects.slice(0, limit) : activeProjects;
 
@@ -43,7 +60,7 @@ export default function ProjectCategoryTabs({
             <button
               key={category}
               type="button"
-              onClick={() => setActive(category)}
+              onClick={() => selectCategory(category)}
               className={`interactive-tab rounded-full px-4 py-2.5 text-sm font-semibold sm:px-5 ${
                 isActive
                   ? "bg-navy text-white shadow-md"

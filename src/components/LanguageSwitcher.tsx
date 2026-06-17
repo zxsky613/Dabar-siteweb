@@ -1,7 +1,7 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import type { Locale } from "@/lib/i18n/config";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { isValidLocale, type Locale } from "@/lib/i18n/config";
 
 type LanguageSwitcherProps = {
   locale: Locale;
@@ -19,12 +19,24 @@ export default function LanguageSwitcher({
   variant = "light",
 }: LanguageSwitcherProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const router = useRouter();
 
   const switchLocale = (newLocale: Locale) => {
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    router.push(segments.join("/"));
+    if (newLocale === locale) return;
+
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length > 0 && isValidLocale(segments[0])) {
+      segments[0] = newLocale;
+    } else {
+      segments.unshift(newLocale);
+    }
+
+    const query = searchParams.toString();
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    const href = `/${segments.join("/")}${query ? `?${query}` : ""}${hash}`;
+
+    router.push(href, { scroll: false });
   };
 
   const isDark = variant === "dark";

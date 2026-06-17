@@ -46,28 +46,14 @@
     "/projects/gallery/gu-cang-allemagne/3.jpg",
     "/projects/gallery/gu-cang-allemagne/4.jpg"
   ],
-  "zhongke-hq": [
-    "/projects/gallery/zhongke-hq/1.jpg",
-    "/projects/gallery/zhongke-hq/2.jpg",
-    "/projects/gallery/zhongke-hq/3.jpg"
-  ],
   "heng-ai": [
     "/projects/gallery/heng-ai/1.jpg",
-    "/projects/gallery/heng-ai/2.jpg",
-    "/projects/gallery/heng-ai/3.jpg",
-    "/projects/gallery/heng-ai/4.jpg"
+    "/projects/gallery/heng-ai/2.jpg"
   ],
   "wanbang": [
     "/projects/gallery/wanbang/1.jpg",
     "/projects/gallery/wanbang/2.jpg",
-    "/projects/gallery/wanbang/3.jpg",
-    "/projects/gallery/wanbang/4.jpg"
-  ],
-  "heyuan": [
-    "/projects/gallery/heyuan/1.jpg",
-    "/projects/gallery/heyuan/2.jpg",
-    "/projects/gallery/heyuan/3.jpg",
-    "/projects/gallery/heyuan/4.jpg"
+    "/projects/gallery/wanbang/3.jpg"
   ],
   "jd-france-77": [
     "/projects/gallery/jd-france-77/1.jpg",
@@ -75,22 +61,10 @@
     "/projects/gallery/jd-france-77/3.jpg",
     "/projects/gallery/jd-france-77/4.jpg"
   ],
-  "jd-dugny": [
-    "/projects/gallery/jd-dugny/1.jpg",
-    "/projects/gallery/jd-dugny/2.jpg",
-    "/projects/gallery/jd-dugny/3.jpg",
-    "/projects/gallery/jd-dugny/4.jpg"
-  ],
   "cainiao-lyon": [
     "/projects/gallery/cainiao-lyon/1.jpg",
     "/projects/gallery/cainiao-lyon/2.jpg",
     "/projects/gallery/cainiao-lyon/3.jpg",
     "/projects/gallery/cainiao-lyon/4.jpg"
-  ],
-  "minth-ruitZ": [
-    "/projects/gallery/minth-ruitZ/1.jpg",
-    "/projects/gallery/minth-ruitZ/2.jpg",
-    "/projects/gallery/minth-ruitZ/3.jpg",
-    "/projects/gallery/minth-ruitZ/4.jpg"
   ]
 }
