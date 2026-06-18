@@ -36,10 +36,7 @@ export default async function HomePage({ params }: PageProps) {
         <div className="relative mx-auto flex min-h-0 flex-1 flex-col justify-center max-w-6xl px-6 py-4">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-10 animate-fade-in-up">
             <div className="flex flex-col justify-center text-center lg:text-left">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-light">
-                Dabar
-              </p>
-              <h1 className="mt-2 text-3xl font-bold leading-tight text-navy sm:mt-3 sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+              <h1 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
                 {dict.hero.title}
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg lg:mx-0">
