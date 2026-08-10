@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10233f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DPF1 查询">
+<title>DPF1 现场查询工具 · Dabar</title>
+<style>
+:root{
+  --ink:#101418;
+  --sub:#5b6470;
+  --bg:#eceef1;
+  --card:#ffffff;
+  --line:#dce0e6;
+  --beam:#10233f;
+  --grating:#1f3a1f;
+  --equip:#3a2510;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  background:var(--bg);color:var(--ink);
+  -webkit-text-size-adjust:100%;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+header{
+  background:#10233f;color:#fff;
+  padding:calc(18px + env(safe-area-inset-top)) 20px 18px;
+}
+header .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+header h1{margin:6px 0 4px;font-size:20px;font-weight:600;letter-spacing:.01em}
+header p{margin:0;font-size:13px;opacity:.72;line-height:1.5}
+main{max-width:720px;margin:0 auto;padding:16px 14px 32px}
+.tool{
+  display:block;text-decoration:none;color:inherit;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;overflow:hidden;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.tool:active{transform:scale(.995)}
+.tool:focus-visible{outline:3px solid #0b57d0;outline-offset:2px}
+.bar{height:6px}
+.tool .body{display:flex;align-items:center;gap:14px;padding:16px}
+.swatch{
+  flex:0 0 auto;width:46px;height:46px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;
+}
+.txt{min-width:0;flex:1}
+.txt h2{margin:0 0 3px;font-size:16px;font-weight:600}
+.txt p{margin:0;font-size:13px;color:var(--sub);line-height:1.45}
+.eg{
+  display:inline-block;margin-top:7px;font-size:12px;color:var(--sub);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:#f2f4f7;border:1px solid var(--line);border-radius:5px;padding:2px 7px;
+}
+.chev{flex:0 0 auto;color:#aab2bd;font-size:22px;line-height:1}
+.beam .bar{background:var(--beam)} .beam .swatch{background:var(--beam)}
+.grating .bar{background:var(--grating)} .grating .swatch{background:var(--grating)}
+.equip .bar{background:var(--equip)} .equip .swatch{background:var(--equip)}
+.note{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;margin-top:18px;font-size:13px;color:var(--sub);line-height:1.6;
+}
+.note strong{color:var(--ink);font-weight:600}
+.note ol{margin:8px 0 0;padding-left:18px}
+.note li{margin-bottom:4px}
+footer{text-align:center;font-size:12px;color:#8d96a2;padding:6px 14px 24px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Dabar · DPF1</div>
+  <h1>DPF1 现场查询工具</h1>
+  <p>输入编号，查装箱信息和图纸位置。首次打开需联网，之后离线可用。</p>
+</header>
+
+<main>
+  <a class="tool beam" href="beam/index.html">
+    <div class="bar"></div>
+    <div class="body">
+      <div class="swatch">横梁</div>
+      <div class="txt">
+        <h2>横梁安装查询</h2>
+        <p>钢平台横梁：托号、平台位置、图纸定位</p>
+        <span class="eg">例：WT25</span>
+      </div>
+      <div class="chev">›</div>
+    </div>
+  </a>
+
+  <a class="tool grating" href="grating/index.html">
+    <div class="bar"></div>
+    <div class="body">
+      <div class="swatch">格栅</div>
+      <div class="txt">
+        <h2>钢格栅安装查询</h2>
+        <p>格栅板：集装箱号、托号、图纸定位</p>
+        <span class="eg">例：H-1</span>
+      </div>
+      <div class="chev">›</div>
+    </div>
+  </a>
+
+  <a class="tool equip" href="equipment/index.html">
+    <div class="bar"></div>
+    <div class="body">
+      <div class="swatch">设备</div>
+      <div class="txt">
+        <h2>设备安装查询（IB + OB）</h2>
+        <p>输送设备：型号、速度、进出口高度、相邻段号</p>
+        <span class="eg">例：OBST+GC01.FB20</span>
+      </div>
+      <div class="chev">›</div>
+    </div>
+  </a>
+
+  <div class="note">
+    <strong>装到手机主屏</strong>
+    <ol>
+      <li>iPhone：Safari 打开 → 分享 → 添加到主屏幕</li>
+      <li>安卓：浏览器菜单 → 添加到主屏幕</li>
+      <li>三个工具分别添加，图标按颜色区分（深蓝／墨绿／棕）</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <strong>仅供 DPF1 现场安装使用</strong><br>
+    页面包含项目图纸与装箱数据，请勿对外转发链接。
+  </div>
+</main>
+
+<footer>Dabar Technique · dabarfrance.com</footer>
+</body>
+</html>
